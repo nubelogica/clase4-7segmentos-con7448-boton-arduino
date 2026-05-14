@@ -1,0 +1,67 @@
+---------------- Código del circuito ------------------------
+
+const int boton=13;
+const int pin12=12;
+const int pin11=11;
+const int pin10=10;
+const int pin9=9;
+bool control= false;
+
+
+void setup(){
+
+pinMode(boton, INPUT);
+pinMode(pin12, OUTPUT);
+pinMode(pin11  , OUTPUT);
+pinMode(pin10  , OUTPUT);
+pinMode(pin9  , OUTPUT);
+
+}
+
+void loop(){
+
+bool control=digitalRead(boton);
+
+if(control == true){
+
+// 0
+digitalWrite(pin12, LOW);
+digitalWrite(pin11,LOW);
+digitalWrite(pin10,LOW);
+digitalWrite(pin9,LOW);
+delay(100);
+//1
+digitalWrite(pin12, HIGH);
+digitalWrite(pin11,LOW);
+digitalWrite(pin10,LOW);
+digitalWrite(pin9,LOW);
+delay(100);
+//2
+digitalWrite(pin12, LOW);
+digitalWrite(pin11,HIGH);
+digitalWrite(pin10,LOW);
+digitalWrite(pin9,LOW);
+delay(100);
+//3
+digitalWrite(pin12, HIGH);
+digitalWrite(pin11,HIGH);
+digitalWrite(pin10,LOW);
+digitalWrite(pin9,LOW);
+delay(100);
+}
+
+
+else {
+
+digitalWrite(pin12, LOW);
+digitalWrite(pin11,LOW);
+digitalWrite(pin10,LOW);
+digitalWrite(pin9,LOW);
+
+}
+
+}
+
+
+
+Para la evaluación, tiene que hacerlo del 0 al 9 vale 25% 
